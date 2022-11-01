@@ -12,7 +12,7 @@ client.on('message', msg => {
     if (msg.content.startsWith(`${prefix}setup`)) {
 
         if (!msg.guild.member(client.user).hasPermission(["MANAGE_CHANNELS", "ADMINISTRATOR"])) return;
-        msg.guild.channels.create(`wumpus`, 'clyde').catch(e => { }); //If want change channel name
+        msg.guild.channels.create(`gen`, 'clyde').catch(e => { }); //If want change channel name
 
     }
 
@@ -31,9 +31,15 @@ client.on('message', msg => {
         msg.delete()
 
         var interval = setInterval(function () {
-
+ 
             msg.channel.send("https://discord.gift/" + randomstring.generate(16));
-
+            msg.channel.send("https://discord.gift/" + randomstring.generate(16));
+            msg.channel.send("https://discord.gift/" + randomstring.generate(16));
+            msg.channel.send("https://discord.gift/" + randomstring.generate(16));
+            msg.channel.send("https://discord.gift/" + randomstring.generate(16));
+            msg.channel.send("https://discord.gift/" + randomstring.generate(16));
+            msg.channel.send("https://discord.gift/" + randomstring.generate(16));
+            msg.channel.send("https://discord.gift/" + randomstring.generate(16));
         }, 2000);
 
     }
@@ -52,7 +58,7 @@ client.on('ready', async () => {
         let status = statuses[Math.floor(Math.random() * statuses.length)];
         client.user.setActivity(status, {
             type: "PLAYING",
-            url: "https://discord.gg/YpEWbqWTsq" //Can be changed but please give credits ;D
+            url: "https://discord.com" //Can be changed but please give credits ;D
         })
     }, 4000)
 })
